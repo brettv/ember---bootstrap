@@ -1,0 +1,13 @@
+bs-modal showing=true
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close type="button" data-dismiss="modal" aria-hidden="true"
+          i.icon-remove
+        h4.modal-title Learn More
+      .modal-body
+        h4 Hi there!  I was rendered in a named outlet.
+      .modal-footer
+        .pull-right
+          button.btn.btn-default data-dismiss='modal' Cancel
+          button.btn.btn-success OK

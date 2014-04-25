@@ -10,11 +10,15 @@ nav.navbar.navbar-default
 
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       ul.nav.navbar-nav
-        li
-          link-to 'welcome'
-            | Welcome 
-        li
-          link-to 'about'
-            | About
+        / See the comments in templates/about.emblem for a description of what
+        / we are doing here.  In a nutshell we are aligning embers default
+        / behavior of adding the "active" class to link-to elements that are
+        / active with bootstraps expected use of the "active" class in markup.
+        link-to 'welcome' tagName="li"
+          a Welcome 
+        link-to 'about' tagName="li"
+          a About
 
 .container= outlet
+
+outlet modal

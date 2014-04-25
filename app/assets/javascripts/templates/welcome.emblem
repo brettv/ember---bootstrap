@@ -1,9 +1,10 @@
 .jumbotron
   h1 Hello, world!
   p This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
-  p: a.btn.btn-primary.btn-lg data-toggle="tooltip" title="Learn more" Learn more
+  p: a.btn.btn-primary.btn-lg data-toggle="tooltip" title="Learn more" click="showInPageModal" Learn more
+  p: a.btn.btn-primary.btn-lg data-toggle="tooltip" title="Learn more" click="showRenderedModal" Learn more
 
-.modal.fade.obs-modal
+bs-modal showing=showModal
   .modal-dialog
     .modal-content
       .modal-header

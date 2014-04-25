@@ -6,11 +6,18 @@
 p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 ul.nav.nav-tabs
-  li
-    link-to 'about.tab1' 
-      | Tab 1
-  li
-    link-to 'about.tab2'
-      | Tab 2
+  / The trick here is to tell link-to to render as an li using the tagName
+  / option available to all views.  That way, the li gets the "active" class
+  / bootstrap is expecting instead of the anchor tag.  Another way to look at
+  / it is we still have an li and an achor tag.  We just told ember to make
+  / the li clickable instead.
+  link-to 'about.tab1' tagName="li"
+    a Tab 1
+  link-to 'about.tab2' tagName="li"
+    a Tab 2
+
+/ Here we are harnessing the power of ember's nested views/child routes to
+/ selective render the contents of the template for the subroutes selected
+/ above ("about.tab1" or "about.tab2").
 .tab-content
   = outlet
