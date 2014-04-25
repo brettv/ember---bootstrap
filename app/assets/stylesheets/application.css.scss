@@ -1,0 +1,21 @@
+/*
+ *= require font-awesome
+ *= require_self
+ *= require_tree .
+ */
+
+@import "bootstrap";
+
+
+// restore some basic link styling to links without an href.  In our case we
+// only use a link if we are acutally going to have a click action of somesort
+// so the lack of an href doesn't mean a dead link.
+a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+
+.tab-content {
+  padding-top: 20px;
+}

@@ -1,0 +1,18 @@
+.jumbotron
+  h1 Hello, world!
+  p This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
+  p: a.btn.btn-primary.btn-lg data-toggle="tooltip" title="Learn more" Learn more
+
+.modal.fade.obs-modal
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close type="button" data-dismiss="modal" aria-hidden="true"
+          i.icon-remove
+        h4.modal-title Learn More
+      .modal-body
+        h4 Hi there!  I am on the page.
+      .modal-footer
+        .pull-right
+          button.btn.btn-default data-dismiss='modal' Cancel
+          button.btn.btn-success OK

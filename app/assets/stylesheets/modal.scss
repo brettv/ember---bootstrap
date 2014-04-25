@@ -1,0 +1,30 @@
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+$title-color: #C5DDEF;
+
+.obs-modal {
+  .modal-header {
+    @include border-top-radius(6px);
+    border-bottom: none;
+    background-color: $title-color;
+    
+    h4 { font-weight: bold; }
+
+    button.close {
+      font-size: 24px;
+      color: $state-danger-text;
+      @include opacity(0.70);
+      &:focus, &:hover {
+        @include opacity(1);
+      }
+    }
+  }
+
+  .modal-footer {
+    padding: 14px 15px 15px;
+    background-color: whitesmoke;
+    border-top: 1px solid #e5e5e5;
+    @include border-bottom-radius(6px);
+  }
+}
